@@ -1,0 +1,14 @@
+{
+    "cmd": ["g++.exe", "-std=c++17", "${file}", "-o", "${file_base_name}.exe"],
+    "selector": "source.cpp",
+    "shell": true,
+    "working_dir": "$file_path",
+    "variants": [
+        {
+            "name": "Run",
+            "cmd": ["cmd", "/c", "${file_base_name}.exe < ${file_path}\\inputf.in > ${file_path}\\outputf.in"],
+            "shell": true,
+            "working_dir": "$file_path"
+        }
+    ]
+}
